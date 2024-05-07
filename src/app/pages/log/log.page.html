@@ -1,54 +1,52 @@
-<br>
 <ion-content [fullscreen]="true" class="text-center">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Application</ion-title>
+
+  <ion-header [translucent]="true">
+    <ion-toolbar color="secondary" class="ion-text-center">
+      <ion-title>
+        <br>
+        @if(register){
+        REGISTRAR USUARIO
+        }
+        @else{
+        INGRESAR USUARIO
+        }
+      </ion-title>
+      <br>
     </ion-toolbar>
   </ion-header>
 
 
-
-
-  <img src="assets/icon.png" alt="logo" style="width: 50%;margin-left: 5.8rem;">
-  <br>
-
-  <ion-grid>
-    <ion-row class="ion-justify-content-around" style="margin-left: 1.8rem;">
-      <ion-col size="3">
-        <ion-button (click)="logAccount1()" [ngClass]="selected === 1 ? 'selected' : 'notselected'">
-          <ion-icon name="person" color="primary"></ion-icon>
-        </ion-button>
-
-      </ion-col>
-      <ion-col size="3">
-        <ion-button (click)="logAccount2()" [ngClass]="selected === 2 ? 'selected' : 'notselected'">
-          <ion-icon name="person" color="primary"></ion-icon>
-        </ion-button>
-      </ion-col>
-      <ion-col size="3">
-        <ion-button (click)="logAccount3()" [ngClass]="selected === 3 ? 'selected' : 'notselected'">
-          <ion-icon name="person" color="primary"></ion-icon>
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-
-
-  <br>
   <form [formGroup]="form" class="login" (ngSubmit)="onSubmit()">
-    <ion-card color="secondary">
+    <ion-card color="secondary" class="ion-text-center">
 
-      <ion-card-header>
-        <br>
-        @if(register){
-        <ion-card-title>REGISTRAR USUARIO</ion-card-title>
-        }
-        @else{
-        <ion-card-title>INGRESAR USUARIO</ion-card-title>
-        }
+      <ion-card-header class="ion-text-center">
+        <div>
+          <img src="assets/icon.png" alt="logo" style="width: 60%;">
+        </div>
+
+        <ion-grid>
+          <ion-row class="ion-justify-content-between ion-align-items-center">
+            <ion-col size="3">
+              <ion-button (click)="logAccount1()" [ngClass]="selected === 1 ? 'selected' : 'notselected'">
+                <ion-icon name="person" color="primary"></ion-icon>
+              </ion-button>
+
+            </ion-col>
+            <ion-col size="3">
+              <ion-button (click)="logAccount2()" [ngClass]="selected === 2 ? 'selected' : 'notselected'">
+                <ion-icon name="person" color="primary"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button (click)="logAccount3()" [ngClass]="selected === 3 ? 'selected' : 'notselected'">
+                <ion-icon name="person" color="primary"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
 
       </ion-card-header>
+
 
       <ion-card-content>
         <ion-list>
@@ -69,13 +67,13 @@
         </ion-list>
       </ion-card-content>
       <br>
-      <ion-card-subtitle style="left: 1em;">
+      <ion-card-subtitle>
         <!-- <hr> -->
         @if(register){
-        Ya tienes una cuenta? <a id="mode" (click)="changeMode()" class="text-bold"> Ingresar</a>
+        <a id="mode" (click)="changeMode()" class="text-bold"> Ingresar</a>
         }
         @else{
-        No tienes cuenta? <a id="mode" (click)="changeMode()" class="text-bold"> Registrarse</a>
+        <a id="mode" (click)="changeMode()" class="text-bold"> Registrarse</a>
         }
       </ion-card-subtitle>
       <br>
@@ -90,8 +88,14 @@
     <ion-grid>
       <ion-row class="ion-justify-content-center">
         <ion-col size="6">
-          <ion-button type="submit" color="secondary" expand="block">
+          <ion-button type="submit" color="secondary" size="large" expand="full">
             <ion-icon name="log-in" size="large"></ion-icon>
+            @if(register){
+            REGISTRAR
+            }
+            @else{
+            INGRESAR
+            }
           </ion-button>
         </ion-col>
       </ion-row>

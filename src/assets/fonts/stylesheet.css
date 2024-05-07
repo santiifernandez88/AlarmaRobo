@@ -3,9 +3,9 @@
 
 
 @font-face {
-    font-family: 'nougatregular';
-    src: url('nougat-extrablack-webfont.woff2') format('woff2'),
-         url('nougat-extrablack-webfont.woff') format('woff');
+    font-family: 'arcane_nineregular';
+    src: url('arcane_nine-webfont.woff2') format('woff2'),
+         url('arcane_nine-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

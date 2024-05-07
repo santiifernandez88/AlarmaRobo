@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'pps.rev.vis',
-  appName: 'Revelamiento Visual',
+  appId: 'pps.ala.rob',
+  appName: 'Alarma de Robo',
   webDir: 'www',
   server: {
     androidScheme: 'https'

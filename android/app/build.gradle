@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "pps.rev.vis"
+    namespace "pps.ala.rob"
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "pps.rev.vis"
+        applicationId "pps.ala.rob"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

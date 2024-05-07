@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Revelamiento Visual</string>
-    <string name="title_activity_main">Revelamiento Visual</string>
-    <string name="package_name">pps.rev.vis</string>
-    <string name="custom_url_scheme">pps.rev.vis</string>
+    <string name="app_name">Alarma de Robo</string>
+    <string name="title_activity_main">Alarma de Robo</string>
+    <string name="package_name">pps.ala.rob</string>
+    <string name="custom_url_scheme">pps.ala.rob</string>
 </resources>

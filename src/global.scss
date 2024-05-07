@@ -27,9 +27,9 @@
 
 
 @font-face {
-    font-family: 'nougatregular';
-    src: url('assets/fonts/nougat-extrablack-webfont.woff2') format('woff2'),
-        url('assets/fonts/nougat-extrablack-webfont.woff') format('woff');
+    font-family: 'arcane_nineregular';
+    src: url('assets/fonts/arcane_nine-webfont.woff2') format('woff2'),
+        url('assets/fonts/arcane_nine-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -38,6 +38,6 @@
 * {
     --ion-background-color: var(--ion-color-primary);
     color: black;
-    font-family: 'nougatregular';
+    font-family: 'arcane_nineregular';
     font-size: medium;
 }
