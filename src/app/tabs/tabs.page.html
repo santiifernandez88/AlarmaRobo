@@ -1,0 +1,22 @@
+<ion-tabs color="secondary">
+
+    <ion-tab-bar slot="bottom" color="secondary">
+        <ion-tab-button tab="tab1" href="/tabs/tab1">
+            <ion-icon aria-hidden="true" name="triangle"></ion-icon>
+            <ion-label>Tab 1</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab2" href="/tabs/tab2">
+            <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
+            <ion-label>Tab 2</ion-label>
+        </ion-tab-button>
+
+
+        <ion-tab-button (click)="logOut()" id="cerrar">
+            <ion-icon name="power"></ion-icon>
+            <ion-label>Cerrar Sesión</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+    <ion-loading trigger="cerrar" message="Loading..." [duration]="3000" spinner="circles"></ion-loading>
+
+</ion-tabs>

@@ -1,0 +1,17 @@
+a {
+    color: black;
+}
+
+
+.list-md {
+    background-color: var(--ion-color-secondary);
+}
+
+
+.selected {
+    --background: var(--ion-color-success);
+}
+
+.notselected {
+    --background: var(--ion-color-secondary);
+}
