@@ -1,39 +1,88 @@
 .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    height: 170px;
-    width: 400px;
-    margin: 0 auto;
-  }
-  
-  b {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 170px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+b {
+  width: 100%;
+}
+
+.ripple-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #ddd;
+
+  user-select: none;
+}
+
+.rounded-rectangle {
+  width: 250px;
+  height: 75px;
+  border-radius: 8px;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr;
+  /* Divide la pantalla en dos filas iguales */
+  height: 100%;
+}
+
+
+.boton:active {
+  transform: scale(0.95);
+  /* Escalar ligeramente cuando se hace clic */
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente el contenido */
+  align-items: center;
+  /* Centra verticalmente el contenido */
+  border: 2px solid #999;
+  /* Borde de 2px sólido */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 2px 2px 5px #aaa;
+  /* Sombra */
+}
+
+
+
+.selected {
+  --background: var(--ion-color-success);
+}
+
+.notselected {
+  --background: var(--ion-color-danger);
+}
+
+@media (min-width:568px) {
+  img {
     width: 100%;
   }
-  
-  .ripple-parent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    position: relative;
-    overflow: hidden;
-  
-    border: 1px solid #ddd;
-  
-    user-select: none;
+}
+
+@media (min-width:768px) {
+  img {
+    width: 35%;
   }
-  
-  .rounded-rectangle {
-    width: 250px;
-    height: 75px;
-    border-radius: 8px;
-  }
-  
-  .circle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-  }
+}

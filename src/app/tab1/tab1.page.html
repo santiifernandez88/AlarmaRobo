@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary">
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-row class="ion-justify-content-between">
+      <ion-col size="6">
+
+        <ion-title>
+          <br>
+          Alarma de Robo
+
+        </ion-title>
+      </ion-col>
+      <ion-col size="6" sizeMd="3" class="ion-align-items-end">
+        <ion-button (click)="logOut()" id="cerrar">
+          <ion-icon name="power"></ion-icon>
+          <ion-label> . Cerrar Sesión</ion-label>
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="secondary">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    <ion-button (click)="toggleDetector()" class="full-screen-button boton"
+      [ngClass]="isDetectorActive ? 'selected' : 'notselected'">
+      <img src="assets/icon.png" alt="icon">
+    </ion-button>
+  </div>
 
-  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+
+  <ion-loading trigger="cerrar" message="Loading..." [duration]="3000" spinner="circles"></ion-loading>
 </ion-content>
